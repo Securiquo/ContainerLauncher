@@ -1,0 +1,22 @@
+[
+  {
+    "appName": "os",
+    "ports": [5000,8080],
+    "imageName": ["flask","frontend-sqli"]
+  },
+  {
+    "appName": "sqli",
+    "ports": [5000,8080],
+    "imageName": ["flask","frontend-sqli"]
+  },
+  {
+    "appName": "ssti",
+    "ports": [5000],
+    "imageName": ["ssti"]
+  },
+    {
+    "appName": "ssti2",
+    "ports": [5000],
+    "imageName": ["ssti2"]
+  }
+]

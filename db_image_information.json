@@ -6,7 +6,7 @@
     "imageName": ["tasks/backend-sqli","tasks/frontend-sqli"],
     "versions": ["v1","v2"],
     "category": "sqli",
-    "description":
+    "description":"Zadanie związane z podatnością na słowo kluczonwe UNION"
   },
   {
     "id": 1
@@ -14,7 +14,8 @@
     "ports": [5000,8080],
     "imageName": ["tasks/backend-sqli-2","tasks/frontend-sqli"],
     "versions": ["v1","v2"],
-    "category": "sqli"
+    "category": "sqli",
+    "description":"Zadanie związane z podatnością na słowo kluczonwe WHERE"
   },
   {
     "id": 2,
@@ -22,14 +23,16 @@
     "ports": [5000],
     "imageName": ["ssti"],
     "versions": ["v1"],
-    "category": "ssti"
+    "category": "ssti",
+    "description":"lorem ipsum"
   },
   {
-    "id": 3
+    "id": 3,
     "appName": "ssti2",
     "ports": [5000],
     "imageName": ["ssti2"],
     "versions": ["v1"],
-    "category": "ssti"
+    "category": "ssti",
+    "description":"lorem ipsum"
   }
 ]

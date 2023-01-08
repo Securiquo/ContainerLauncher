@@ -1,13 +1,15 @@
 [
   {
-    "appName": "os",
+    "appName": "sqliunion",
     "ports": [5000,8080],
-    "imageName": ["flask","frontend-sqli"]
+    "imageName": ["tasks/backend-sqli","tasks/frontend-sqli"],
+    "versions": ["v1","v2"]
   },
   {
-    "appName": "sqli",
+    "appName": "sqliwhere",
     "ports": [5000,8080],
-    "imageName": ["flask","frontend-sqli"]
+    "imageName": ["tasks/backend-sqli-2","tasks/frontend-sqli"],
+    "versions": ["v1","v2"]
   },
   {
     "appName": "ssti",

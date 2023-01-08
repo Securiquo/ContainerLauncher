@@ -27,7 +27,7 @@ def get_rg(resource_client, rg_name):
 
 
 def get_acr_credentials():
-    password=os.getenv("ACRPASSWORD")
+    password = os.getenv("ACRPASSWORD")
     return [ImageRegistryCredential(server='acrsecuritumdev.azurecr.io', username='acrsecuritumdev',
                                     password=password)]
 
@@ -70,7 +70,8 @@ def open_container():
 
     for j in range(0, len(container_app["imageName"])):
         containers.append(Container(name=str("{0}{1}".format(container_image_name, j)),
-                                    image="acrsecuritumdev.azurecr.io/{0}:v1".format(container_app["imageName"][j]),
+                                    image="acrsecuritumdev.azurecr.io/{0}:{1}".format(container_app["imageName"][j],
+                                                                                      container_app["versions"][j]),
                                     resources=container_resource_requirements,
                                     environment_variables=[command_flag],
                                     ports=[ContainerPort(port=container_app["ports"][j])]))
@@ -84,7 +85,6 @@ def open_container():
     group = ContainerGroup(location=rg.location,
                            containers=containers,
                            os_type=OperatingSystemTypes.linux,
-                           restart_policy=ContainerGroupRestartPolicy.never,
                            image_registry_credentials=acr_credentials,
                            ip_address=group_ip_address)
 
@@ -106,3 +106,9 @@ def close_container():
                                             container_group_name)
     return jsonify(success=True)
 
+
+@app.route("/api/tasks", methods=["GET"])
+def get_tasks():
+    f = open('./db_image_information.json')
+    images = json.load(f)
+    return jsonify(images=images)

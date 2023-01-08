@@ -1,24 +1,35 @@
 [
   {
+    "id": 0,
     "appName": "sqliunion",
     "ports": [5000,8080],
     "imageName": ["tasks/backend-sqli","tasks/frontend-sqli"],
-    "versions": ["v1","v2"]
+    "versions": ["v1","v2"],
+    "category": "sqli",
+    "description":
   },
   {
+    "id": 1
     "appName": "sqliwhere",
     "ports": [5000,8080],
     "imageName": ["tasks/backend-sqli-2","tasks/frontend-sqli"],
-    "versions": ["v1","v2"]
+    "versions": ["v1","v2"],
+    "category": "sqli"
   },
   {
+    "id": 2,
     "appName": "ssti",
     "ports": [5000],
-    "imageName": ["ssti"]
+    "imageName": ["ssti"],
+    "versions": ["v1"],
+    "category": "ssti"
   },
-    {
+  {
+    "id": 3
     "appName": "ssti2",
     "ports": [5000],
-    "imageName": ["ssti2"]
+    "imageName": ["ssti2"],
+    "versions": ["v1"],
+    "category": "ssti"
   }
 ]

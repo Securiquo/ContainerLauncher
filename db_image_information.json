@@ -2,29 +2,30 @@
   {
     "id": 0,
     "appName": "sqliunion",
-    "ports": [5000,8080],
-    "imageName": ["tasks/backend-sqli","tasks/frontend-sqli"],
-    "versions": ["v1","v2"],
-    "category": "sqli",
-    "description":"Zadanie związane z podatnością na słowo kluczonwe UNION"
+    "ports": [5000,8080,80],
+    "imageName": ["tasks/backend-sqli","tasks/frontend-sqli","tools/reverse-proxy"],
+    "versions": ["v2","v3","v2"],
+    "category": "SQL injection",
+    "description":"Zadanie związane z podatnością na słowo kluczowe UNION"
   },
   {
-    "id": 1
+    "id": 1,
     "appName": "sqliwhere",
-    "ports": [5000,8080],
-    "imageName": ["tasks/backend-sqli-2","tasks/frontend-sqli"],
-    "versions": ["v1","v2"],
-    "category": "sqli",
+    "ports": [5000,8080,80],
+    "imageName": ["tasks/backend-sqli-2","tasks/frontend-sqli","tools/reverse-proxy"],
+    "versions": ["v1","v3","v2"],
+    "category": "SQL Where",
     "description":"Zadanie związane z podatnością na słowo kluczonwe WHERE"
   },
+
   {
     "id": 2,
-    "appName": "ssti",
+    "appName": "SSTI 1",
     "ports": [5000],
     "imageName": ["ssti"],
     "versions": ["v1"],
-    "category": "ssti",
-    "description":"lorem ipsum"
+    "category": "SSTI",
+    "description":"Użyj podatności SSTI do wyciągnięcia ukrytej flagi ze zmiennych konfiguracyjnych"
   },
   {
     "id": 3,
@@ -34,5 +35,14 @@
     "versions": ["v1"],
     "category": "ssti",
     "description":"lorem ipsum"
+  },
+    {
+    "id": 4,
+    "appName": "oscommandinjection",
+    "ports": [80],
+    "imageName": ["tasks/os-command-injection"],
+    "versions": ["v4"],
+    "category": "os command injection",
+    "description":"Wykorzystaj podatność wstrzykiwania komend systemowych, aby wydobyć flagę przechowywaną w pliku flag.txt"
   }
 ]

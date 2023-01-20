@@ -112,3 +112,4 @@ def get_tasks():
     f = open('./db_image_information.json')
     images = json.load(f)
     return jsonify(images=images)
+

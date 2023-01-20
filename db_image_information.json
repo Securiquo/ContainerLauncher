@@ -22,7 +22,7 @@
     "id": 2,
     "appName": "SSTI 1",
     "ports": [5000],
-    "imageName": ["ssti"],
+    "imageName": ["tasks/ssti"],
     "versions": ["v1"],
     "category": "SSTI",
     "description":"Użyj podatności SSTI do wyciągnięcia ukrytej flagi ze zmiennych konfiguracyjnych"
@@ -31,10 +31,10 @@
     "id": 3,
     "appName": "ssti2",
     "ports": [5000],
-    "imageName": ["ssti2"],
+    "imageName": ["tasks/ssti2"],
     "versions": ["v1"],
     "category": "ssti",
-    "description":"lorem ipsum"
+    "description":"Użyj podatności SSTI do wyciągnięcia ukrytej flagi ze zmiennych konfiguracyjnych"
   },
     {
     "id": 4,

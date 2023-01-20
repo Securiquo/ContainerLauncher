@@ -20,7 +20,7 @@
 
   {
     "id": 2,
-    "appName": "SSTI 1",
+    "appName": "ssti1",
     "ports": [5000],
     "imageName": ["tasks/ssti"],
     "versions": ["v1"],
